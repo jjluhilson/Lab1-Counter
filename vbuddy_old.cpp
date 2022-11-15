@@ -2,8 +2,8 @@
  \file    vbuddy.cpp
  \brief   additional C++ code included in DUT testbench file to communicate with Vbuddy
  \author  Peter Cheung, Imperial College London
- \version 1.3
- \date    22 Oct 2022
+ \version 1.2
+ \date    12 September 2022
 
 This package is written to support a second year module on Electronics & Information Engineering (EIE)
 at Imperial College. The module is on the design of the RISC V CPU.
@@ -585,7 +585,6 @@ char serialib::writeString(const char *receivedString)
     return 1;
 #endif
 #if defined (__linux__) || defined(__APPLE__)
-    std::cout << "";        // hack for comms issue with WSL
     // Lenght of the string
     int Lenght=strlen(receivedString);
     // Write the string
